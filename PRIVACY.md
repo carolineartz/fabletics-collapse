@@ -1,6 +1,6 @@
 # Privacy policy
 
-Fabletics Color Collapse runs only on fabletics.com pages.
+Color Collapse for Fabletics runs only on fabletics.com pages.
 
 - It does not collect, store, or transmit any personal data, browsing history,
   or analytics.

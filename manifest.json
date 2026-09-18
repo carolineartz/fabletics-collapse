@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Fabletics Color Collapse",
+  "name": "Color Collapse for Fabletics",
   "version": "0.3.0",
   "description": "Shows each Fabletics product once in the grid instead of once per color.",
   "minimum_chrome_version": "111",
@@ -14,7 +14,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Fabletics Color Collapse",
+    "default_title": "Color Collapse for Fabletics",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

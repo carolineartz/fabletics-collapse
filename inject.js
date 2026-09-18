@@ -198,7 +198,7 @@
       headers.delete('content-encoding');
       return new Response(JSON.stringify(json), { status: res.status, statusText: res.statusText, headers });
     } catch (err) {
-      console.warn('[Fabletics Color Collapse] falling back to original response:', err);
+      console.warn('[Color Collapse for Fabletics] falling back to original response:', err);
       return res;
     }
   }

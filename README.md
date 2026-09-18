@@ -1,4 +1,4 @@
-# Fabletics Color Collapse
+# Color Collapse for Fabletics
 
 A Chrome extension that shows each Fabletics product once in the grid instead of
 once per color. On the women's leggings page that turns ~750 tiles into a couple
