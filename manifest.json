@@ -1,11 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Color Collapse for Fabletics",
-  "version": "0.3.0",
-  "description": "Shows each Fabletics product once in the grid instead of once per color.",
+  "version": "0.4.0",
+  "description": "See each Fabletics product once instead of once per color. Same grid, same filters, a fraction of the scrolling.",
   "minimum_chrome_version": "111",
-  "permissions": ["storage", "activeTab"],
-  "host_permissions": ["https://*.fabletics.com/*"],
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.fabletics.com/*"
+  ],
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -22,20 +27,37 @@
       "128": "icons/icon128.png"
     }
   },
-  "background": { "service_worker": "background.js" },
+  "background": {
+    "service_worker": "background.js"
+  },
   "web_accessible_resources": [
-    { "resources": ["icons/icon128.png"], "matches": ["https://*.fabletics.com/*"] }
+    {
+      "resources": [
+        "icons/icon128.png"
+      ],
+      "matches": [
+        "https://*.fabletics.com/*"
+      ]
+    }
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.fabletics.com/*"],
-      "js": ["inject.js"],
+      "matches": [
+        "https://*.fabletics.com/*"
+      ],
+      "js": [
+        "inject.js"
+      ],
       "run_at": "document_start",
       "world": "MAIN"
     },
     {
-      "matches": ["https://*.fabletics.com/*"],
-      "js": ["bridge.js"],
+      "matches": [
+        "https://*.fabletics.com/*"
+      ],
+      "js": [
+        "bridge.js"
+      ],
       "run_at": "document_start"
     }
   ]
