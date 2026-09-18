@@ -35,7 +35,8 @@ APPLESCRIPT
 }
 
 capture() {
-  local name="$1" wid="$2" tmp="$out/.window-$name.png"
+  local name="$1" wid="$2"
+  local tmp="$out/.window-$name.png"
   sleep 1
   screencapture -o -x -l "$wid" "$tmp"
   local h w
