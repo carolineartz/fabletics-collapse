@@ -24,7 +24,7 @@ tell application "Google Chrome"
       if URL of t contains "fabletics.com" then
         set active tab index of w to i
         set b to bounds of w
-        set bounds of w to {item 1 of b, item 2 of b, (item 1 of b) + 1280, (item 2 of b) + 977}
+        set bounds of w to {item 1 of b, item 2 of b, (item 1 of b) + 1280, (item 2 of b) + 996}
         set index of w to 1
         activate
         set b to bounds of w
@@ -48,8 +48,10 @@ capture() {
   fi
   IFS=, read -r left top right bottom <<<"$bounds"
   sleep 1.5
-  # The viewport is the bottom of the window, 1280 wide. Capture the bottom
-  # 800 points, then normalize the Retina capture to exactly 1280x800.
+  # The viewport is the bottom of the window, 1280 wide. The window is sized so
+  # the viewport is a little taller than 800pt; capturing the bottom 800 points
+  # starts just below the site's top promo bar. Then normalize the Retina
+  # capture to exactly 1280x800.
   screencapture -x -R "${left},$((bottom - 800)),1280,800" "$out/$name.png"
   sips -z 800 1280 "$out/$name.png" >/dev/null
   echo "Saved $out/$name.png"
